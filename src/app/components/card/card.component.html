@@ -1,0 +1,42 @@
+<div
+  class="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl mt-6 relative"
+>
+  <button
+    (click)="onRemove()"
+    class="absolute top-2 right-2 bg-slate-50 hover:bg-slate-100 text-slate-600 rounded p-1.5 flex items-center justify-center transition-all duration-200 shadow-sm"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="16"
+      height="16"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    >
+      <path d="M18 6L6 18"></path>
+      <path d="M6 6l12 12"></path>
+    </svg>
+  </button>
+  <div class="md:flex">
+    <div class="md:shrink-0">
+      <img
+        class="h-48 w-full object-cover md:h-full md:w-48"
+        [src]="imageUrl"
+        alt="Card image"
+      />
+    </div>
+    <div class="p-8">
+      <div
+        class="uppercase tracking-wide text-sm text-indigo-500 font-semibold"
+      >
+        {{ query }}
+      </div>
+      <p class="mt-2 text-gray-500">
+        {{ wikiText }}
+      </p>
+    </div>
+  </div>
+</div>
